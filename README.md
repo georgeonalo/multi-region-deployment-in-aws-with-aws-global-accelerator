@@ -1,6 +1,6 @@
 # Multi region deployment with aws global accelerator
 
-To implement a multi region deployment, otherwise known as blue/green deployment across different AWS Regions, use [Global Accelerator traffic dials to dial](https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-traffic-dial.html) up or down traffic to a specific AWS Region. For each AWS Region (or endpoint group), we set a traffic dial to control the percentage of traffic that is directed to that Region.
+To implement a multi region deployment, otherwise known as blue/green deployment across different AWS Regions, we make use of [Global Accelerator traffic dials to dial](https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-traffic-dial.html) up or down traffic to a specific AWS Region. For each AWS Region (or endpoint group), we set a traffic dial to control the percentage of traffic that is directed to that Region.
  
  
 Once you create and test the new version of your application, first set the traffic dial to 0 to cut off traffic for the green Region, the next available Region will serve the traffic that was supposed to be served by the green region. Remove the previous endpoints from the endpoint group (or set their endpoint weights to 0), add the new version of the application as endpoints to the endpoint group.
