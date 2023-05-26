@@ -1,0 +1,1 @@
+# multi-region-deployment-in-aws-with-aws-global-accelerator
