@@ -34,6 +34,43 @@ $ aws globalaccelerator update-endpoint-group \
 
 ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/f2dce5a9-c3c8-493f-aa2c-836b61a60cca)
 
+
+# Example of blue/green deployment for a multi-region application
+
+I would like to implement a blue/green deployment for a multi-region application deployed in two AWS Regions: US-WEST-2 (Oregon) and EU-WEST-1 (Dublin). The application consists of an Application Load Balancer in each Region, acting as endpoints for our accelerator
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/ba28cedb-6fd8-465c-ad7a-69b0b6a099d5)
+
+
+
+
+In this example I execute the following Bash script that uses [cURL](https://curl.se/) to simulate 100 requests to the accelerator DNS and output a count of where each request was processed:
+
+
+
+```
+$ for ((i=0;i<100;i++)); do curl http://aebd116200e8c28ad.awsglobalaccelerator.com/ --silent >> output.txt; done; cat output.txt | sort | uniq -c ; rm output.txt;
+```
+
+
+
+For more information on how Global Accelerator routes client requests, see [how AWS Global Accelerator works](https://docs.aws.amazon.com/global-accelerator/latest/dg/introduction-how-it-works.html) in the documentation.
+
+
+
+Requests from a client who should be served by US-WEST-2 region:
+
+
+
+```
+$ for ((i=0;i<100;i++)); do curl http://aebd116200e8c28ad.awsglobalaccelerator.com/ --silent >> output.txt; done; cat output.txt | sort | uniq -c ; rm output.txt;
+ 100 requests processed in US-WEST-2 (BLUE Environment)
+ ```
+ 
+ 
+ 
+
   
   
   
