@@ -226,7 +226,7 @@ For this step and step 4 below, i simply repeted the two first step above, but t
 
 ## Step 5: Create and configure a Global Accelerator service
 
-This Global accelerator service connects the endpoints of my two ec2 server on which my ecommerce application is deployed in the two different regions.
+### This Global accelerator service connects the endpoints of my two ec2 server on which my ecommerce application is deployed in the two different regions.
 
 
 ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/0714755a-9f70-43ae-8500-539f10cfc9ca)
@@ -255,7 +255,7 @@ This Global accelerator service connects the endpoints of my two ec2 server on w
 
 
 
-Once the you create the Global accelerator service status shows deployed, copy the the dns name and paste it in the browser to access the application.
+### Once the you create the Global accelerator service status shows deployed, copy the the dns name and paste it in the browser to access the application.
 
 
 ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/4b9bdf12-8197-428c-a013-a029fd0e65a2)
@@ -267,7 +267,7 @@ Once the you create the Global accelerator service status shows deployed, copy t
 
 
 
-The Global Accelerator service is now directing traffic to both the us-east-1 and eu-central-1 regions.
+### The Global Accelerator service is now directing traffic to both the us-east-1 and eu-central-1 regions.
 
 
 
@@ -283,7 +283,7 @@ To cause this failover, i will delibrately, make the health target in eu-central
 
 
 
-To comfirm if the global accelerator service has redirected traffic to the us-east-1 region, paste the the dns of the global accerator in the browser.
+### To comfirm if the global accelerator service has redirected traffic to the us-east-1 region, paste the the dns of the global accerator in the browser.
 
 
 ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/de086804-8168-4886-82e9-39d9f6d5fdcc)
