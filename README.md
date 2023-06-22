@@ -240,7 +240,7 @@ For this step and step 4 below, i simply repeted the two first step above, but t
 
 ## Step 5: Create and configure a Global Accelerator service
 
-### This Global accelerator service connects the endpoints of my two ec2 server on which my ecommerce application is deployed in the two different regions.
+#### This Global accelerator service connects the endpoints of my two ec2 server on which my ecommerce application is deployed in the two different regions.
 
 
 ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/0714755a-9f70-43ae-8500-539f10cfc9ca)
