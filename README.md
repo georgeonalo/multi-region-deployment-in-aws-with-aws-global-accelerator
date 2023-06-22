@@ -164,6 +164,67 @@ $ for ((i=0;i<100;i++)); do curl http://aebd116200e8c28ad.awsglobalaccelerator.c
  
  
  By following the write up above, you can quickly implement blue/green and canary deployments for multi-region applications using [AWS Global Accelerator](https://aws.amazon.com/global-accelerator/). This solution is easy to implement, and does not relay on DNS, so you are not impacted by DNS caching and long DNS TTLs. Beyond traffic dials and endpoint groups, Global Accelerator also provides many other features such as failover, client affinity, health checking, and DDoS protection.
+
+
+
+
+
+
+
+
+ # IMPLEMENTATION OF MULTI REGION DEPLOYMENT OF AN ECOMMERCE WEBSITE ON AWS WITH GLOBAL ACCELERATOR
+
+ ## Step 1: launch an intance in the us-east-1 region
+
+ For this step, i used an already existing AMI on which my ecommerce website is installed to luanch an ec2 in the us-east-1a region
+
+
+ ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/ad6cd092-4c09-43fb-a32d-701292a759e8)
+
+
+
+
+  ## Step 2: launch an rds intance(read replica) in the us-east-1 region 
+
+  For this step, i also used an already existing rds snapshot which was connected to my AMI to luanch an rds instance in the us-east-1b region
+
+
+  ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/ffc52789-68d4-4325-be4b-a7b1a17743b8)
+
+
+
+## Step 3: launch an intance in the eu-central-1a region
+
+For this step and step 4 below, i simply repeted the two first step above, but this time in eu-central-1 
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/25f8a905-274f-4de7-9aff-10d9a5937431)
+
+
+
+## Step 4: launch an rds intance(read replica) in the eu-central-1b region
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/e69366c4-ded3-4ee5-b586-7b6a7ec59d98)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ To access my website, i simply paste the public ipv4 address of the instance in my browser
+
+ 
+
  
  
  
