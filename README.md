@@ -193,6 +193,19 @@ $ for ((i=0;i<100;i++)); do curl http://aebd116200e8c28ad.awsglobalaccelerator.c
 
 
 
+
+
+ To access my website, i simply paste the public ipv4 address of the instance in my browser
+
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/1318247f-8416-42f4-aeb1-c1fa26cdcbcc)
+
+
+
+
+
+
 ## Step 3: launch an intance in the eu-central-1a region
 
 For this step and step 4 below, i simply repeted the two first step above, but this time in eu-central-1 
@@ -305,7 +318,6 @@ Yessssssssssssssssssssssssssssssss! the service is working fine.
 
 
 
- To access my website, i simply paste the public ipv4 address of the instance in my browser
 
  
 
