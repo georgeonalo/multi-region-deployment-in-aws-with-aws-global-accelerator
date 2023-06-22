@@ -255,7 +255,7 @@ For this step and step 4 below, i simply repeted the two first step above, but t
 
 
 
-### Once the you create the Global accelerator service status shows deployed, copy the the dns name and paste it in the browser to access the application.
+### Once you have created the Global accelerator service and the status shows "deployed", copy the the dns name and paste it in the browser to access the application.
 
 
 ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/4b9bdf12-8197-428c-a013-a029fd0e65a2)
