@@ -274,7 +274,7 @@ For this step and step 4 below, i simply repeted the two first step above, but t
 
 
 
-### Once you have created the Global accelerator service and the status shows "deployed", copy the the dns name and paste it in the browser to access the application.
+#### Once you have created the Global accelerator service and the status shows "deployed", copy the the dns name and paste it in the browser to access the application.
 
 
 ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/4b9bdf12-8197-428c-a013-a029fd0e65a2)
@@ -286,7 +286,7 @@ For this step and step 4 below, i simply repeted the two first step above, but t
 
 
 
-### The Global Accelerator service is now directing traffic to both the us-east-1 and eu-central-1 regions.
+#### The Global Accelerator service is now directing traffic to both the us-east-1 and eu-central-1 regions.
 
 
 
@@ -302,7 +302,7 @@ To cause this failover, i will delibrately, make the health target in eu-central
 
 
 
-### To comfirm if the global accelerator service has redirected traffic to the us-east-1 region, paste the the dns of the global accerator in the browser.
+#### To comfirm if the global accelerator service has redirected traffic to the us-east-1 region, paste the the dns of the global accerator in the browser.
 
 
 ![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/de086804-8168-4886-82e9-39d9f6d5fdcc)
