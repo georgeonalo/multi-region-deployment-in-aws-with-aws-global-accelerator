@@ -172,6 +172,21 @@ $ for ((i=0;i<100;i++)); do curl http://aebd116200e8c28ad.awsglobalaccelerator.c
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  # IMPLEMENTATION OF MULTI REGION DEPLOYMENT OF AN ECOMMERCE WEBSITE ON AWS WITH GLOBAL ACCELERATOR
 
  ## Step 1: launch an intance in the us-east-1 region
