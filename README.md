@@ -211,6 +211,90 @@ For this step and step 4 below, i simply repeted the two first step above, but t
 
 
 
+## Step 5: Create and configure a Global Accelerator service
+
+This Global accelerator service connects the endpoints of my two ec2 server on which my ecommerce application is deployed in the two different regions.
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/0714755a-9f70-43ae-8500-539f10cfc9ca)
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/fe63ab41-d93f-4b27-9c99-13f68eabaa0a)
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/fc8c460a-1acf-435d-96fc-cc3fa2803e61)
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/6c5ad260-fb2d-4478-9dbd-e17f1fbb5915)
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/16179894-a66b-4a99-9944-2893b1ad2064)
+
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/2eb9d460-e256-4d03-8c05-d65aac6a96ac)
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/31327665-2ab4-4434-aec9-4db19ce3f9bc)
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/65e32ea0-1136-47a2-bf9d-4637f428c2e7)
+
+
+
+Once the you create the Global accelerator service status shows deployed, copy the the dns name and paste it in the browser to access the application.
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/4b9bdf12-8197-428c-a013-a029fd0e65a2)
+
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/f6522787-22d8-42ab-a04f-03983dcc15a2)
+
+
+
+
+The Global Accelerator service is now directing traffic to both the us-east-1 and eu-central-1 regions.
+
+
+
+
+## Step 6: Test the Global Accelerator for failover capability
+
+By Failover, i mean, if for any reason, something happens to either one of the region, say eu-cenral-1, the service should be able to direct traffic to us-east-1 for me to still be able to access the application.
+
+To cause this failover, i will delibrately, make the health target in eu-central-1 to be unhealthy, by editing the security group of the ec2 instance so that traffic is blocked. This action will prevent me from accessing the ecommerce application on the ipv4 address of the ec2 instance, when its pasted on the browser.
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/6d4c86c5-c961-43cd-b7f2-ece51ae3f3f0)
+
+
+
+To comfirm if the global accelerator service has redirected traffic to the us-east-1 region, paste the the dns of the global accerator in the browser.
+
+
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/de086804-8168-4886-82e9-39d9f6d5fdcc)
+
+
+
+
+Yessssssssssssssssssssssssssssssss! the service is working fine.
+
+
+
+
+
+
+ 
+
+ 
+ 
+ 
+
+  
+  
+  
+
 
 
 
