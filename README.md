@@ -270,6 +270,11 @@ For this step and step 4 below, i simply repeted the two first step above, but t
 
 
 
+![image](https://github.com/georgeonalo/multi-region-deployment-in-aws-with-aws-global-accelerator/assets/115881685/cb9b4351-4ed1-4d7f-b66e-1e28e40f4018)
+
+
+
+
 ### Once you have created the Global accelerator service and the status shows "deployed", copy the the dns name and paste it in the browser to access the application.
 
 
