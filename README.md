@@ -209,8 +209,7 @@ $ for ((i=0;i<100;i++)); do curl http://aebd116200e8c28ad.awsglobalaccelerator.c
 
 
 
-
- To access my website, i simply paste the public ipv4 address of the instance in my browser
+#### To access my website, i simply paste the public ipv4 address of the instance in my browser
 
 
 
